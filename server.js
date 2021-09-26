@@ -17,10 +17,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
   secret: 'dolphinswillwintoday',
-  cookie: {
-        // Session will automatically expire in 5 minutes
-        expires: 5 * 60 * 1000
-  },
+  cookie: {maxAge: 36000},
   resave: true,
   rolling: true,
   saveUninitialized: true,
@@ -30,7 +27,6 @@ const sess = {
 };
 
 app.use(session(sess));
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));

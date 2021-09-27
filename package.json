@@ -1,12 +1,11 @@
 {
   "name": "challenge14",
   "version": "1.0.0",
-  "description": "",
+  "description": "# Description This application is designed as a blog style website where the user is able to create an account in order to login. Once logged in they are able to create a post and comment on the post as well. The user is also presented with the ability to view all posts.",
   "main": "server.js",
   "scripts": {
-    "test": "jest",
-    "start": "node server.js",
-    "seed": "node seeds/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +24,6 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.3.4",
     "express-session": "^1.17.2",
-    "jest": "^27.2.2",
     "mysql2": "^2.3.0",
     "sequelize": "^6.6.5"
   }

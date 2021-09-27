@@ -1,9 +1,5 @@
-<article class="post">
-
-    {{#each posts as |post| }}
-        {{> post-info post}}
-    {{/each}}
-
-</article>
-
-
+{{#each posts}}
+<a href="/post/{{id}}">
+    {{> post-info }}
+</a>
+{{/each}}

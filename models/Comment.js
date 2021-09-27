@@ -1,29 +1,21 @@
-const {Model, DataTypes} = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Comment extends Model {}
 
 Comment.init(
     {
-        //columns will go here
         id: {
             type: DataTypes.INTEGER,
+            allowNull: false,
             primaryKey: true,
             autoIncrement: true
         },
         comment_text: {
             type: DataTypes.STRING,
-            validate: {
-            // this means the comment_text must be at least three characters long
-            len: [3]
-            }
-        },
-        user_id: {
-            type: DataTypes.INTEGER,
             allowNull: false,
-            references: {
-                model: 'user',
-                key: 'id'
+            validate: {
+                len: [4]
             }
         },
         post_id: {
@@ -32,7 +24,8 @@ Comment.init(
             references: {
                 model: 'post',
                 key: 'id'
-            }
+            },
+            onDelete: 'cascade'
         }
     },
     {
@@ -42,6 +35,5 @@ Comment.init(
         modelName: 'comment'
     }
 );
-
 
 module.exports = Comment;

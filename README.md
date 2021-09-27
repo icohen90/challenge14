@@ -15,7 +15,7 @@ In order to install this application you should clone the github repo found here
 
 # Screenshots 
 First walkthrough video of how to start application and working get routes<br>
-<img src="https://github.com/icohen90/challenge14/blob/main/assets/tech-blog.png">
+<img src="https://github.com/icohen90/challenge14/blob/main/app.png">
 
 
 # Built With
